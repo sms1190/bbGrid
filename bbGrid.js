@@ -652,10 +652,10 @@ _.extend(bbGrid.PagerView.prototype, Backbone.View.prototype, {
                     <input class="bbGrid-page-input" value="<%=page%>" type="text">\
                     <div class="bbGrid-page-counter-right pull-right"> ' + this.view.dict.prep + ' <%=cntpages%> </div>\
                 </li>\
-                <li<%if (page === cntpages) {%> class="active"<%}%>>\
+                <li<%if (page === cntpages ||(cntpages===0)) {%> class="active"<%}%>>\
                     <a class="right"><i class="icon-forward"/></a>\
                 </li>\
-                <li<%if (page === cntpages) {%> class="active"<%}%>>\
+                <li<%if (page === cntpages ||(cntpages===0)) {%> class="active"<%}%>>\
                     <a class="last"><i class="icon-step-forward"/></a>\
                 </li>\
             </ul>\
